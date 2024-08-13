@@ -1,0 +1,5 @@
+Se mejoro el focus del boton de enter del login
+
+en menu.html se agregaron atributos de accesibilidad como tabindex para poder moverse con el tab
+
+en showReports se agrego que reportesMovilBtn y reportesBtn funcionaran con enters y no solo clicks aunque datos servicio y reporte final no estan respondiendo

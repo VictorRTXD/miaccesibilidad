@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/menu.css">
+    <title>Servicio </title>
+</head>
+
+<body>
+    <a href="index.html">regresar al login improvisado</a>
+    <header class="header">
+        <img src="images/caduceo.png" alt="" id="logo" oncontextmenu="return false" ondragstart="return false">
+        <h2>Reportes Área de la Salud</h2>
+        <img src="icons/menu.png" alt="" id="menu">
+        <div class="oculto" id="sidebarmenu">
+            <h1>Reportes Área<br> de la Salud</h1>
+            <img src="images/caduceo.png" alt="" oncontextmenu="return false" ondragstart="return false" id="logo">
+            <img src="icons/cerrar.png" alt="" id="cerrarmenu">
+            <div class="report" id="DatosMenu">
+                <h3>Datos Servicio</h3>
+            </div>
+            <div class="report btn-report-movil" id="Report1Menu" reportNumber="1">
+                <h3>Reporte 1</h3>
+            </div>
+            <div class="report btn-report-movil" id="Report2Menu" reportNumber="2">
+                <h3>Reporte 2</h3>
+            </div>
+            <div class="report btn-report-movil" id="Report3Menu" reportNumber="3">
+                <h3>Reporte 3</h3>
+            </div>
+            <div class="report btn-report-movil" id="Report4Menu" reportNumber="4">
+                <h3>Reporte 4</h3>
+            </div>
+            <div class="report" id="ReportFinalMenu">
+                <h3>Reporte Final</h3>
+            </div>
+            <div class="report" id="Close">
+                <h3>Cerrar Sesión</h3>
+            </div>
+        </div>
+    </header>
+    <aside class="sidebar" id="sidebar" role="complementary" aria-labelledby="sidebarTitle">
+        <h1 id="sidebarTitle">Reportes Área<br> de la Salud</h1>
+        <img src="images/caduceo.png" alt="Caduceo" oncontextmenu="return false" ondragstart="return false" role="img" aria-label="Caduceo">
+        
+        <div class="report" id="Datos" tabindex="0">
+            <h3>Datos Servicio</h3>
+        </div>
+        
+        <div class="report btn-report" id="Report1" reportNumber="1" tabindex="0" role="button" aria-label="Reporte 1">
+            <h3>Reporte 1</h3>
+        </div>
+        
+        <div class="report btn-report" id="Report2" reportNumber="2" tabindex="0" role="button" aria-label="Reporte 2">
+            <h3>Reporte 2</h3>
+        </div>
+        
+        <div class="report btn-report" id="Report3" reportNumber="3" tabindex="0" role="button" aria-label="Reporte 3">
+            <h3>Reporte 3</h3>
+        </div>
+        
+        <div class="report btn-report" id="Report4" reportNumber="4" tabindex="0" role="button" aria-label="Reporte 4">
+            <h3>Reporte 4</h3>
+        </div>
+        
+        <div class="report" id="ReportFinal" tabindex="0">
+            <h3>Reporte Final</h3>
+        </div>
+        
+        <div class="report" id="Close" tabindex="0" role="button" aria-label="Cerrar Sesión">
+            <h3>Cerrar Sesión</h3>
+        </div>
+    </aside>
+    
+    <main>
+        <section class="main" id="main">
+            <div class="welcome" id="welcome">
+                <img src="images/escudo.png" alt="" oncontextmenu="return false" ondragstart="return false">
+                <p id="bienvenido">¡Bienvenido!</p>
+                <p>Para ver o completar reportes seleccionalo <br>desde la barra</p>
+            </div>
+
+            <div class="oculto" id="finalReport">
+                <div class="formulariofinal" id="formulariofinal">
+                    <h1>Formulario Reporte Final</h1>
+                    <label for="metas">Metas Alcanzadas</label>
+                    <textarea name="metas" id="metas"></textarea>
+                    <label for="metodologia">Metodología Utilizada</label>
+                    <textarea name="metodologia" id="metodologia"></textarea>
+                    <label for="inovacion">Inovación Aportada</label>
+                    <textarea name="inovacion" id="inovacion"></textarea>
+                    <label for="conclusiones">Conclusiones</label>
+                    <textarea name="conclusiones" id="conclusiones"></textarea>
+                    <label for="propuestas">Propuestas</label>
+                    <textarea name="propuestas" id="propuestas"></textarea>
+                    <div class="botonguardar" id="guardar-btn">
+                        <p>Guardar</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="oculto" id="register">
+                <div class="master">
+                    <h1>Actualizar Servicio</h1>
+                    <div class="form">
+                        <label for="entidadR">Entidad receptora:</label>
+                        <input id="entidadR" type="text">
+                    </div>
+
+                    <div class="form">
+                        <label for="receptor">Receptor:</label>
+                        <input id="receptor" type="text">
+                    </div>
+
+                    <div class="form">
+                        <label for="programa">Programa:</label>
+                        <input id="programa" type="text">
+                    </div>
+
+                    <div class="fechas">
+                        <label for="fechaI">Fecha inicio:</label>
+                        <input id="fechaI" type="date" placeholder="dd/mm/aaaa">
+
+
+                        <label for="fechaF">Fecha Fin:</label>
+                        <input id="fechaF" type="date" placeholder="dd/mm/aaaa">
+                    </div>
+
+                    <div class="horas">
+                        <label for="horaI">Hora de inicio de la Jornada:</label>
+                        <input id="horaI" type="time" placeholder="hh:mm tm">
+
+
+                        <label for="horaF">Hora de fin de la Jornada:</label>
+                        <input id="horaF" type="time" placeholder="hh:mm tm">
+                    </div>
+
+                    <div class="form">
+                        <label for="objetivos">Objetivos del Programa:</label>
+                        <input id="objetivos" type="text">
+                    </div>
+
+                    <!-- <div class="botonguardar" id="guardar-btn-registro">
+                        <p>Guardar</p>
+                    </div> -->
+                    <button class="botonguardar" id="crear-servicio-btn" onclick="crearServicio()">Guardar</button>
+                    <button class="botonmodificar oculto" id="actualizar-servicio-btn" onclick="actualizarServicio()">Modificar</button>
+                </div>
+            </div>
+
+            <div class="oculto reporteparcial" id="form-reporte-parcial">
+                <div id="form-container">
+                    <h1 id="title"> </h1>
+            
+                        <div class="section" id="actividades-container">
+                            <h3>Actividades realizadas</h3>
+                            <div id="activades-agregadas-container">
+
+                                <!-- <div class="actividad-agregada">
+                                    <p class="actividad-descripcion">Atención a pacientes con heridas simples</p>
+                                    <input type="number" class="actividad-cantidad" name="" id="" value="0">
+                                    <p>x</p>
+                                </div>
+
+                                
+                                <div class="actividad-agregada">
+                                    <p class="actividad-descripcion">Limpieza de equipo de operaciones</p>
+                                    <input type="number" class="actividad-cantidad" name="" id="" value="0">
+                                    <p onclick="prueba()">x</p>
+                                </div>
+                                <div class="actividad-agregada">
+                                    <p class="actividad-descripcion">acomodo de la oficina del jefe</p>
+                                    <input type="number" class="actividad-cantidad" name="" id="" value="0">
+                                    <p>x</p>
+                                </div>
+                                <div class="actividad-agregada">
+                                    <p class="actividad-descripcion">30 lagartijas porque sí</p>
+                                    <input type="number" class="actividad-cantidad" name="" id="" value="0">
+                                    <p>x</p>
+                                </div> -->
+                            </div>
+
+                            <div id="botonera-actividades">
+                                <div id="btn-agregar-actividad"> <span id="btn-plus-agregar-actividad"> + </span>Agregar actividad</div>
+                                <div id="btn-crear-actividad"> <span id="btn-plus-crear-actividad"> + </span>Crear actividad</div>
+                            </div>
+
+                            
+                        </div>
+
+                        <div class="section" id="atenciones-container" >
+                            <div id="atenciones-titulos" >
+                                <h4 style="justify-self: center;">Atenciones realizadas</h2>
+                                <p>Prenatales</p>
+                                <p>Niños de 0 a 12 años</p>
+                                <p>Hombres</p>
+                                <p>Mujeres</p>
+                                <p>Geriátrico</p>
+                                <p>Total</p>
+                                <p>Horas Realizadas:</p>
+                            </div>
+                            <div id="atenciones-cantidades">
+                                <h4 style="justify-self: center;">Cantidad</h4>
+                                <input class="atenciones-cantidad-input" type="number" onchange="calcularTotal()" id="prenatales" value="0">
+                                <input class="atenciones-cantidad-input" type="number" onchange="calcularTotal()" id="niños" value="0">
+                                <input class="atenciones-cantidad-input" type="number" onchange="calcularTotal()" id="hombres" value="0">
+                                <input class="atenciones-cantidad-input" type="number" onchange="calcularTotal()" id="mujeres" value="0">
+                                <input class="atenciones-cantidad-input" type="number" onchange="calcularTotal()" id="geriatrico" value="0">
+                                <input class="atenciones-cantidad-input" type="number" id = "atencionesTotal" disabled value="0">
+                                <input class="atenciones-cantidad-input" type="number" id="hours" value="0">
+                            </div>
+
+                        </div>
+
+                       <div class="section" id="botonera-guardar-reporte">
+                        <button class="botonguardar" id="btn-crear-reporte">Guardar</button>
+                        <button class="botonmodificar oculto" id="btn-actualizar-reporte" >Modificar</button>
+                        <button class="botonguardar oculto" id="btn-mostrar-pdf"> Mostrar PDF</button>
+                          
+                       </div>
+
+                               
+                </div>
+            </div>
+
+
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- <script>
+        if(sessionStorage.getItem("token") == undefined){
+            document.location.assign("index.html");
+        }
+    </script> -->
+    <script src="scripts/hadleServicio.js"></script>
+    <script src="scripts/sidebar.js"></script>
+    <script src="scripts/handleActivities.js"></script>
+    <script src="scripts/showReports.js"></script>
+    <script src="scripts/crear-pdf.js"></Script>
+    <style>
+        embed {
+            width: 80vw;
+            height: 100vh;
+        }
+
+        @media (0px <=width <=720px) {
+            embed {
+                margin-top: 70px;
+                width: 100vw;
+                height: 85vh;
+            }
+        }
+    </style>
+
+</body>
+
+</html>

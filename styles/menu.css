@@ -1,0 +1,466 @@
+/* @font-face {
+    font-family: 'ubuntu';
+    src: url(/fonts/Ubuntu-Regular.ttf);
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: "Ubuntu", sans-serif;
+}
+
+main{
+    width: 80vw;
+    height: 100vh;
+}
+#main{
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background-color: #EAECEE;
+    display: flex;
+    overflow-y: hidden;
+    
+    
+    width: 100vw;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 20vw;
+    height: 100vh;
+    background-color: #CD5700;
+    color: white;
+    text-align: center;
+    overflow: auto;
+    min-width: 250px;
+    min-height: 400px;
+    user-select: none;
+}
+
+.sidebar h1 {
+    font-weight: medium;
+    font-size: 40px;
+    padding-top: 5%;
+}
+
+.sidebar img {
+    width: 60px;
+    padding-top: 3%;
+}
+
+.report {
+    display: grid;
+    place-content: center;
+    text-align: center;
+    border: 2px solid white;
+    width: 80%;
+    height: 50px;
+    margin-left: 10%;
+    margin-top: 8%;
+    margin-bottom: 8%;
+}
+
+.report:hover {
+    background-color: #EAECEE;
+    color: #CD5700;
+}
+
+.welcome {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    display: grid;
+    place-content: center;
+    user-select: none;
+    /* overflow: auto; */
+}
+
+.welcome img {
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    opacity: 0.3;
+
+}
+
+.welcome #bienvenido {
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.welcome p {
+    font-style: normal;
+    font-size: 20px;
+}
+
+.header {
+    display: none;
+}
+
+.sidebarmenu {
+    top: 10%;
+    position: absolute;
+    display: list-item;
+    width: 100vw;
+    height: 100vh;
+    background-color: #CD5700;
+    color: white;
+    text-align: center;
+    overflow: auto;
+    min-width: 0;
+    user-select: none;
+    z-index: 2000;
+
+}
+
+.sidebarmenu .report {
+    display: grid;
+    place-content: center;
+    text-align: center;
+    border: 2px solid white;
+    width: 80vw;
+    height: 50px;
+    margin-left: 10%;
+    margin-top: 8%;
+    margin-bottom: 8%;
+}
+
+.sidebarmenu h1 {
+    font-weight: medium;
+    font-size: 40px;
+
+}
+
+.sidebarmenu #cerrarmenu {
+    width: 30px;
+    position: absolute;
+    top: 1%;
+    left: 3%;
+}
+
+.sidebarmenu #logo {
+    width: 60px;
+    padding-top: 3%;
+}
+
+
+h1{
+    text-align: center;
+}
+
+
+
+.master{
+    width: 100%;
+    
+    padding: 20px;
+    display: grid;
+    
+}
+
+.form{
+    display: grid;
+    width: 100%;
+}
+
+.fechas{
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+}
+
+.horas{
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+}
+
+label{
+    
+    margin-top: 10px;
+}
+
+.master input{
+    padding: 6px;
+    font-size: 18px;
+    align-items: center;
+    background-color: transparent;
+    border-bottom: #CD5700 3px solid;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    
+}
+
+#register{
+    width: 100%;
+    height: 100%;
+}
+
+/* formulario reportes parciales */
+#form-reporte-parcial{
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+#form-container{
+    display: grid;
+    width: 90%;
+    height: 100%;
+    max-height: 100%;
+    justify-items: center;
+    align-items: center;
+    
+}
+
+#actividades-container{
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-rows: 50px auto 50px;
+    background-color: white;
+    
+    
+    padding: 10px;
+    border-radius: 10px;
+}
+#botonera-actividades{
+    display: grid;
+    width: 100%;
+    grid-auto-flow: column;
+
+}
+#btn-agregar-actividad, #btn-crear-actividad{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-auto-flow: column;
+    column-gap: 5px;
+    cursor: pointer;
+}
+
+#btn-plus-agregar-actividad, #btn-plus-crear-actividad{
+    font-size: 20px;
+}
+
+#activades-agregadas-container{
+    width: 100%;
+    height: 200px;
+    padding: 10px;
+    overflow-y: auto;
+    
+}
+
+.actividad-agregada{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 80% 10% 10%;
+    grid-template-rows: 100%;
+    column-gap: 5px;
+    padding-bottom: 5px;
+    border-bottom: 1px #CD5700 solid;
+    margin-bottom: 5px;
+}
+
+.actividad-descripcion{
+
+    max-width: 100%;
+    overflow-wrap: break-word;
+    text-wrap: pretty;
+}
+.actividad-cantidad{
+    height: 20px;
+    width: 95%;
+    align-self: center;
+}
+
+.btn-eliminar-actividad{
+    cursor: pointer;
+    user-select: none;
+}
+
+#atenciones-container{
+    display: grid;
+    width: 70%;
+    grid-template-columns: 50% 50%;
+    background-color: white;
+
+    padding: 10px;
+    border-radius: 10px;
+}
+#atenciones-titulos, #atenciones-cantidades{
+    display: grid;
+    row-gap: 5px;
+}
+
+.atenciones-cantidad-input{
+    width: 50px;
+}
+
+.section{
+    margin: 10px;
+    width: 70%;
+}
+
+#botonera-guardar-reporte{
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+
+*::-webkit-scrollbar {
+    height: 10px;
+    width: 10px;
+  }
+  *::-webkit-scrollbar-track {
+    border-radius: 5px;
+    background-color: #FFFFFF;
+  }
+  
+
+  *::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: #CD5700;
+  }
+
+#finalReport {
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+/* Estilos del formulario */
+.formulariofinal {
+    display: grid;
+    width: 90%;
+    height: 100%;
+    max-height: 100%;
+    justify-items: center;
+    align-items: center;
+}
+
+
+
+/* Estilos de los títulos */
+.formulariofinal h1 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+/* Estilos de las etiquetas y textarea */
+/* .formulariofinal label {
+    display: block;
+    font-style: normal;
+    margin-bottom: 5px;
+} */
+
+.formulariofinal textarea {
+    width: 90%;
+    height: 100%;
+    /* height: 10vh; */
+    padding: 10px;
+    /* Incluye el padding en el ancho total */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: none;
+}
+
+.botonguardar, .botonmodificar {
+    background-color: #CD5700;
+    text-align: center;
+    width: 50%;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    align-self: center;
+    border: 2px solid;
+    justify-self: center;
+    align-self: center;
+}
+
+.botonguardar:hover, .botonmodificar:hover {
+    background-color: #EAECEE;
+    color: #CD5700;
+    border: #CD5700 2px solid;
+}
+
+.oculto {
+    display: none !important;
+}
+
+@media (0px <=width <=720px) {
+
+    .header {
+        position: fixed;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 10vh;
+        width: 100vw;
+        background-color: #CD5700;
+        color: #EAECEE;
+        z-index: 100;
+    }
+
+    .header #logo {
+        width: 50px;
+        height: fit-content;
+    }
+
+    .header #menu {
+        color: #EAECEE;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .welcome {
+        width: 80vw;
+        
+        min-height: 0;
+        min-width: 0;
+        margin-left: 10%;
+    }
+    main{
+        width: 100vw;
+        height: 89svh;
+        bottom: 0px;
+        position: fixed;
+        overflow-y: auto;
+    }
+    #atenciones-container{
+        width: 100%;
+    }
+    .section{
+        margin: 10px;
+        width: 100%;
+    }
+
+
+    /* #finalReport {
+        
+    } */
+
+    /* Estilos del formulario */
+    /* .formulariofinal {
+
+        width: 80vw;
+        height: auto;
+         Alinea el texto a la izquierda 
+    } */
+
+}

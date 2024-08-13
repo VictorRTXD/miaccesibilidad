@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles/login.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Reporte final</title>
+</head>
+<body>
+    <div id="particles-js">
+
+    </div>
+    <main id="background" class="background">
+        <section id="box1">
+            <div class="login">
+                <p>Iniciar sesión</p>
+            <form id="loginForm" action="">
+               
+                <label for="codigo">Código de alumno:</label>
+                <input id="codigo" type="text" placeholder="Ingrese su código">
+                <label for="password">NIP:</label>
+                <input id="password" type="password" placeholder="Ingrese su NIP">
+                <button id = "iniciar-sesion-btn">Iniciar Sesión</button>
+            </form>
+            </div>
+        </section>
+        <section id="box2">
+            <img id="logo" src="images/udgblanco.png" alt="UDG logo">
+            <p>Reportes Área de la Salud</p>
+            <img id="serp" src="images/caduceo.png" alt="">
+            <a href="menu.html">ir al menu improvisado</a>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="scripts/particles.js"></script>
+    <script src="scripts/particles_init.js"></script>
+    <script>
+        let formulario = document.getElementById("loginForm")
+
+        formulario.addEventListener("submit", (event) => {
+            event.preventDefault();
+        })
+    </script>
+
+    <script src = "scripts/iniciar-sesion.js"></script>
+</body>
+</html>
