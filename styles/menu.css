@@ -64,9 +64,10 @@ body {
     margin-left: 10%;
     margin-top: 8%;
     margin-bottom: 8%;
+    cursor: pointer;
 }
 
-.report:hover {
+.report:hover, .report:focus {
     background-color: #EAECEE;
     color: #CD5700;
 }

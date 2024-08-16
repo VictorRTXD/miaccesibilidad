@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
         btn.addEventListener("click", handleAction);
     
         // Manejar el evento de teclado (Enter)
-        btn.addEventListener("keydown", function(event) {
+        btn.addEventListener("keyup", function(event) {
             if (event.key === "Enter") {
                 handleAction.call(this);
             }
@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
         btn.addEventListener("click", handleAction);
     
         // Manejar el evento de teclado (Enter)
-        btn.addEventListener("keydown", function(event) {
+        btn.addEventListener("keyup", function(event) {
             if (event.key === "Enter") {
                 handleAction.call(this);
             }
@@ -75,25 +75,41 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // Función para abrir el formulario final
-    openFinal.onclick = function () {
+    // Tu función para el botón openFinal
+    function mostrarFinal() {
         ocultarTodos();
         formFinal.classList.remove("oculto");
     }
 
-    openFinalMenu.onclick = function () {
-        ocultarTodos();
-        formFinal.classList.remove("oculto");
-    }
+    // Asignar la función al clic del botón
+    openFinal.onclick = mostrarFinal;
+
+    // Manejar el evento de teclado (Enter) en openFinal
+    openFinal.addEventListener("keyup", function(event) {
+        if (event.key === "Enter") {
+            mostrarFinal();
+        }
+    });
 
     // Función para abrir el formulario de registro
-    openRegister.onclick = function () {
+    function mostrarRegistro() {
         ocultarTodos();
         formRegister.classList.remove("oculto");
     }
+
+    // Asignar la función al clic del botón
+    openRegister.onclick = mostrarRegistro;
+
+    // Asignar la función a la tecla Enter
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Enter') {
+            mostrarRegistro();
+        }
+    });
+
 
     openRegisterMenu.onclick = function () {
         ocultarTodos();
         formRegister.classList.remove("oculto");
     }
-
 });
