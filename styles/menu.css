@@ -67,9 +67,18 @@ body {
     cursor: pointer;
 }
 
-.report:hover, .report:focus {
+button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.report:hover, .report:focus, button:hover {
     background-color: #EAECEE;
     color: #CD5700;
+    cursor: pointer;
 }
 
 .welcome {
