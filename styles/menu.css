@@ -289,9 +289,7 @@ label{
 }
 
 #atenciones-container{
-    display: grid;
     width: 70%;
-    grid-template-columns: 50% 50%;
     background-color: white;
 
     padding: 10px;
@@ -302,11 +300,17 @@ label{
     row-gap: 5px;
 }
 
+.form {
+    display: flex;
+    justify-content: space-around;
+}
+
 .atenciones-cantidad-input{
     width: 50px;
 }
 
 .section{
+    display: grid;
     margin: 10px;
     width: 70%;
 }

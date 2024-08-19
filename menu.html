@@ -189,29 +189,31 @@
 
                             
                         </div>
-
+                        
                         <div class="section" id="atenciones-container" >
-                            <div id="atenciones-titulos" >
-                                <h4 style="justify-self: center;">Atenciones realizadas</h2>
-                                <p>Prenatales</p>
-                                <p>Niños de 0 a 12 años</p>
-                                <p>Hombres</p>
-                                <p>Mujeres</p>
-                                <p>Geriátrico</p>
-                                <p>Total</p>
-                                <p>Horas Realizadas:</p>
+                            <h2 style="justify-self: center;" tabindex="0">Atenciones realizadas</h2>
+                            <div class="form">
+                                <div id="atenciones-titulos" >
+                                    <h4>Categorías</h4>
+                                    <label for="prenatales">Prenatales</label>
+                                    <label for="niños">Niños de 0 a 12 años</label>
+                                    <label for="hombres">Hombres</label>
+                                    <label for="mujeres">Mujeres</label>
+                                    <label for="geriatrico">Geriátrico</label>
+                                    <label for="atencionesTotal">Total</label>
+                                    <label for="hours">Horas Realizadas</label>
+                                </div>
+                                <div id="atenciones-cantidades">
+                                    <h4>Cantidad</h4>
+                                    <input class="atenciones-cantidad-input" type="number" onchange="calcularTotal()" id="prenatales" value="0">
+                                    <input class="atenciones-cantidad-input" type="number" onchange="calcularTotal()" id="niños" value="0">
+                                    <input class="atenciones-cantidad-input" type="number" onchange="calcularTotal()" id="hombres" value="0">
+                                    <input class="atenciones-cantidad-input" type="number" onchange="calcularTotal()" id="mujeres" value="0">
+                                    <input class="atenciones-cantidad-input" type="number" onchange="calcularTotal()" id="geriatrico" value="0">
+                                    <input class="atenciones-cantidad-input" type="number" id="atencionesTotal" disabled value="0">
+                                    <input class="atenciones-cantidad-input" type="number" id="hours" value="0">
+                                </div>
                             </div>
-                            <div id="atenciones-cantidades">
-                                <h4 style="justify-self: center;">Cantidad</h4>
-                                <input class="atenciones-cantidad-input" type="number" onchange="calcularTotal()" id="prenatales" value="0">
-                                <input class="atenciones-cantidad-input" type="number" onchange="calcularTotal()" id="niños" value="0">
-                                <input class="atenciones-cantidad-input" type="number" onchange="calcularTotal()" id="hombres" value="0">
-                                <input class="atenciones-cantidad-input" type="number" onchange="calcularTotal()" id="mujeres" value="0">
-                                <input class="atenciones-cantidad-input" type="number" onchange="calcularTotal()" id="geriatrico" value="0">
-                                <input class="atenciones-cantidad-input" type="number" id = "atencionesTotal" disabled value="0">
-                                <input class="atenciones-cantidad-input" type="number" id="hours" value="0">
-                            </div>
-
                         </div>
 
                        <div class="section" id="botonera-guardar-reporte">
