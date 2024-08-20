@@ -67,7 +67,7 @@ body {
     cursor: pointer;
 }
 
-button {
+a, button {
     background-color: transparent;
     border: none;
     color: white;
