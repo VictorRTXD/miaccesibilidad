@@ -32,10 +32,10 @@
         <img src="images/caduceo.png" alt="Caduceo" oncontextmenu="return false" ondragstart="return false" role="img" aria-label="Caduceo">
 
         <a href="#entidadR" class="report" id="Datos" tabindex="0">Datos servicio</a>
-        <a href="#title" class="report btn-report" id="Report1" reportNumber="1" tabindex="0" role="button" aria-label="Reporte 1">Reporte 1</a>
-        <a href="#title" class="report btn-report" id="Report2" reportNumber="2" tabindex="0" role="button" aria-label="Reporte 2">Reporte 2</a>
-        <a href="#title" class="report btn-report" id="Report3" reportNumber="3" tabindex="0" role="button" aria-label="Reporte 3">Reporte 3</a>
-        <a href="#title" class="report btn-report" id="Report4" reportNumber="4" tabindex="0" role="button" aria-label="Reporte 4">Reporte 4</a>
+        <a href="#title" class="report btn-report" id="Report1" reportNumber="1" tabindex="0" aria-label="Reporte 1">Reporte 1</a>
+        <a href="#title" class="report btn-report" id="Report2" reportNumber="2" tabindex="0" aria-label="Reporte 2">Reporte 2</a>
+        <a href="#title" class="report btn-report" id="Report3" reportNumber="3" tabindex="0" aria-label="Reporte 3">Reporte 3</a>
+        <a href="#title" class="report btn-report" id="Report4" reportNumber="4" tabindex="0" aria-label="Reporte 4">Reporte 4</a>
         <a href="#metas" class="report" id="ReportFinal" tabindex="0">Reporte Final</a>
         <button class="report" id="Close" tabindex="0" role="button" aria-label="Cerrar Sesión">Cerrar sesion</button>
     </aside>
@@ -86,12 +86,10 @@
                     </div>
 
                     <div class="fechas">
-                        <label for="fechaI">Fecha inicio:</label>
-                        <input id="fechaI" type="date" placeholder="dd/mm/aaaa">
-
-
-                        <label for="fechaF">Fecha Fin:</label>
-                        <input id="fechaF" type="date" placeholder="dd/mm/aaaa">
+                        <label id="fechaI-label" for="fechaI">Fecha inicio:</label>
+                        <input id="fechaI" type="date" aria-labelledby="fechaI-label" aria-required="true">
+                        <label id="fechaF-label" for="fechaF">Fecha Fin:</label>
+                        <input id="fechaF" type="date" aria-labelledby="fechaF-label" aria-required="true">
                     </div>
 
                     <div class="horas">
@@ -118,7 +116,7 @@
 
             <div class="oculto reporteparcial" id="form-reporte-parcial">
                 <div id="form-container">
-                    <h1 id="title"> </h1>
+                    <h1 id="title" aria-label="Estas dentro de un reporte de servicio, pulsa la tecla tab para empezar a llenar el reporte"> </h1>
             
                         <div class="section" id="actividades-container">
                             <h3>Actividades realizadas</h3>
