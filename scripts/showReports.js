@@ -19,6 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
         function handleAction() {
             const numero = this.getAttribute("reportNumber");
             tituloReporte.innerHTML = "Reporte parcial " + numero;
+            tituloReporte.setAttribute('aria-label', `Estas en reporte parcial ${numero}`);
     
             ocultarTodos();
             reportForm.classList.remove("oculto");
